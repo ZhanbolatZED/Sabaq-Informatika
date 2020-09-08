@@ -1,0 +1,16 @@
+html {
+	background: black;
+}
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+h1 {
+	color: #00b7ff;
+	font-size: 29px;
+	font-family: Roboto, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
