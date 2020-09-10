@@ -1,16 +1,276 @@
-html {
-	background: black;
+*, *::after, *::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-.content {
+html, body {
+	font-family: Arial, 'Roboto', sans-serif;
+}
+/*!  onclick top  */
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	height: 40px;
+	width: 40px;
+	border: 3px solid red;
+	background-color: green;
+}
+
+/*! end onclick top */
+/* .wrapper {} */
+
+.continer {
+	max-width: 990px;
+	margin: 0px auto;
+	padding: 0 10px;
+}
+/* ? header style */
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+.header::before {
+	content: '';
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0099ff;
+	z-index: 2;
 }
-h1 {
-	color: #00b7ff;
-	font-size: 29px;
-	font-family: Roboto, sans-serif;
+.header__body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+.header__logo {
+	flex: 0 0 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+}
+.header__logo img {
+	max-width: 100%;
+	display: block;
+}
+.header__list {
+	position: relative;
+	display: block;
+	z-index: 2;
+}
+.header__list li {
+	list-style: none;
+	margin: 0 0  20px 0;
+}
+.header__link {
+	color: #fff;
 	text-transform: uppercase;
-	letter-spacing: 4px;
+	font-size: 14px;
+	text-decoration: none;
+}
+.header__burger {
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 20px;
+	z-index: 3;
+}
+.header__burger span {
+	position: absolute;
+	background-color: #fff;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	top: 9px;
+	border-radius: 50%;
+}
+.header__burger::before,
+.header__burger::after {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	border-radius: 50%;
+}
+.header__burger::before {
+	top: 0;
+}
+.header__burger::after {
+	bottom: 0;
+}
+.header__menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #015096;
+	padding:70px 10px 20px 10px;
+	display: none;
+}
+
+/* ? Section About style */
+.about {
+	position: relative;
+	top: 50px;
+	background-color: #bdbcff;
+	padding: 60px 0 30px 0;
+	overflow: hidden;
+	height: 200vh;
+}
+.about__body {
+	display: flex;
+	justify-content: space-between;
+}
+.img__1 {
+	display: none;
+	overflow: visible;
+}
+.about__jeki {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: rgba(14, 240, 240, 0.2);
+	z-index: 2;
+}
+.jeki__line-1,
+.jeki__line-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100px;
+	border: 4px solid #0ef0f0;
+	border-radius: 50%;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.jeki__line-1 {
+	animation: jeki1 3s infinite cubic-bezier(0.01, 0.01, 1, 1);
+}
+.jeki__line-2 {
+	top: 8px;
+	left: 8px;
+	height: 84px;
+	width: 84px;
+	animation: jeki2 3s infinite cubic-bezier(0.01, 0.01, 1, 1);
+}
+@keyframes jeki1 {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+@keyframes jeki2 {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.jeki__text {
+	text-align: center;
+	line-height: 100px;
+	letter-spacing: 2px;
+	color: #0ef0f0;
+	font-size: 21px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0 23px;
+	/* font-family: ; */
+}
+.about__title {
+	color: #0099ff;
+	font-size: 55px;
+	font-weight: 700;
+	padding: 10px;
+	text-transform: capitalize;
+}
+.about__title span {
+	text-transform: lowercase;
+}
+.jeki__background {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 1px;
+	width: 1px;
+}
+.jeki__background-row {
+	position: absolute;
+	top: -231px;
+   left: 52px;
+	height: 400px;
+	width: 400px;
+	background-color: #0099ff;
+	transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 977px) {
+	.about__title p {
+		position: relative;
+		z-index: 3;
+		color: #015096;
+	}
+}
+@media (max-width: 800px) {
+	.jeki__background-row {
+		left: -210px;
+	}
+}
+@media (max-width: 425px) {
+	.header__body {
+		height: 50px;
+	}
+	.header__logo {
+		flex: 0 0 40px;
+	}
+	.img__1 {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		flex: 0 0 100%;
+	}
+	.img__1 img {
+		width: 100%;
+	}
+	.about__body {
+		flex-wrap: wrap;
+	}
+	.about__jeki {
+		top: -50px;
+	}
+	.jeki__background {
+		display: none;
+		visibility: visible;
+	}
+	.about__title p {
+		font-size: 34px;
+	}
 }
