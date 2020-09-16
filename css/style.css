@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 html, body {
-	font-family: Arial, 'Roboto', sans-serif;
+	font-family: Arial, Roboto, sans-serif;
 	scroll-behavior: smooth;
 }
 /*!  onclick top  */
@@ -83,19 +83,19 @@ html, body {
 }
 .header__link {
 	display: block;
-	color: #07006d;
+	color: #00d0ff;
 	padding: 10px;
 	text-decoration: none;
 	font-size: 17px;
 	font-weight: 700;
-	background: #003e5a62;
+	background: #00082fed;
 	margin: 3px;
 	transition: 0.5s;
 }
 .header__link:hover {
 	transform: translateX(10px);
-	color: #00e1ff;
-	background: #003e5a93;
+	text-shadow: 0 0 15px #00d0ff;
+	background: #00082fed;
 }
 input[type="checkbox"]
 {
@@ -283,7 +283,8 @@ h1 {
 	font-size: calc(17px + 16 * (100vw / 1440));
 	font-weight: 600;
 	letter-spacing: 2px;
-	text-indent: 60px;
+	/* text-indent: 60px; */
+	text-align: center;
 }
 .content__task {
 	position: relative;
@@ -309,7 +310,7 @@ h1 {
 	top: 50px;
 	z-index: 1;
 	left: 0;
-	width: 80%;
+	width: 100%;
 }
 .task__name {
 	position: absolute;
@@ -351,12 +352,10 @@ h1 {
 	border-radius: 10px;
 }
 .question__table {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	margin: 40px 0;
 	color: #000122;
-	background-color: #fff;
+	overflow: hidden;
+	overflow-x: auto;
 }
 .table {
 	display: flex;
@@ -365,17 +364,23 @@ h1 {
 .table tr {
 	border: 1px solid #000122;
 }
-.table tr:first-child {
-	background-color: #004ddd;
+.table th {
+	background-color: #006ae2;
 	text-align: center;
 	font-weight: 600;
-}
-.table td {
-	background-color: #004dddad;
 	padding: 6px;
 	border: 1px solid #000122;
 }
-
+.table td {
+	background-color: #419aff;
+	padding: 6px;
+	border: 1px solid #000122;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.table td ul {
+	padding: 5px 0 0 15px;
+}
 
 
 @media (max-width: 977px) {
@@ -389,6 +394,12 @@ h1 {
 	.jeki__background-row {
 		left: -210px;
 	}
+}
+@media (max-width: 768px) {
+	.table__2 {
+	min-width: 990px;
+	overflow-x: auto;
+}
 }
 @media (max-width: 425px) {
 	.header__body {
