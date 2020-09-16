@@ -83,12 +83,12 @@ html, body {
 }
 .header__link {
 	display: block;
-	color: #000a25;
+	color: #07006d;
 	padding: 10px;
 	text-decoration: none;
 	font-size: 17px;
 	font-weight: 700;
-	background: #003d5a3b;
+	background: #003e5a62;
 	margin: 3px;
 	transition: 0.5s;
 }
@@ -202,14 +202,14 @@ input[type="checkbox"]:checked ~ .header__list {
 	border-bottom-color: transparent;
 }
 .jeki__line-1 {
-	animation: jeki1 3s infinite 3s cubic-bezier(0.01, 0.01, 1, 1);
+	animation: jeki1 3s infinite cubic-bezier(0.01, 0.01, 1, 1);
 }
 .jeki__line-2 {
 	top: 8px;
 	left: 8px;
 	height: 84px;
 	width: 84px;
-	animation: jeki2 3s infinite 3s cubic-bezier(0.01, 0.01, 1, 1);
+	animation: jeki2 3s infinite cubic-bezier(0.01, 0.01, 1, 1);
 }
 @keyframes jeki1 {
 	100% {
@@ -235,7 +235,7 @@ input[type="checkbox"]:checked ~ .header__list {
 .about__title {
 	color: #0074c2;
 	/* font-size: 55px; */
-	font-size: calc(34px + 16 * (100vw / 900));
+	font-size: calc(26px + 16 * (100vw / 990));
 	font-weight: 700;
 	padding: 10px 55px 10px 30px;
 	text-transform: capitalize;
@@ -261,9 +261,16 @@ input[type="checkbox"]:checked ~ .header__list {
 	transform: rotate(45deg);
 }
 
+
+/* ? HOME Works style */
+
+
 .homework {
+	position: relative;
 	width: 100%;
 	height: 100%;
+	color: #0ef0f0;
+	background-color: #000122;
 }
 .homework__body {
 	display: block;
@@ -273,78 +280,101 @@ input[type="checkbox"]:checked ~ .header__list {
 	padding: 30px 20px;
 }
 h1 {
-	font-size: calc(12px + 16 * (100vw / 1440));
-	color: #0074c2;
-	font-weight: 700;
+	font-size: calc(17px + 16 * (100vw / 1440));
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-indent: 60px;
 }
 .content__task {
+	position: relative;
+	padding: 30px 0px 100px 20px;
 }
 .task__number {
+	position: absolute;
+	padding: 10px;
+	height: 40px;
+	width: 40px;
+	border: 3px solid #0ef0f0;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #003c70;
+	font-weight: 900;
+	line-height: 15px;
+	z-index: 2;
 }
-.task__line-1 {
-}
-.task__line-2 {
+.task__line {
+	position: absolute;
+	height: 3px;
+	background-color: #0ef0f0;
+	top: 50px;
+	z-index: 1;
+	left: 0;
+	width: 80%;
 }
 .task__name {
+	position: absolute;
+	right: 0;
+	top: 35px;
+	background-color: #003c70;
+	font-weight: 600;
+	font-size: 18px;
+	letter-spacing: 1px;
+	z-index: 2;
+	padding: 6px 8px;
+	border-bottom: 3px solid #0ef0f0;
+	border-left: 3px solid #0ef0f0;
 }
 .answer__question {
+	padding: 0px 0 100px 0;
+	display: block;
 }
 .answer {
+	margin: -30px 0 0 0;
 }
 .answer__text {
+	font-size: calc(14px + 16 * (100vw / 1440));
+	letter-spacing: 1px;
+	text-indent: 30px;
 }
 .question {
+	padding: 50px;
+	letter-spacing: 1px;
+}
+.question__title {
+	font-size: calc(11px + 16 * (100vw / 1440));
+	padding: 0 0 7px 10px;
 }
 .question__text {
+	font-size: calc(11px + 16 * (100vw / 1440));
+	padding: 10px;
+	border: 2px solid #7ef0ff;
+	border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.question__table {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 40px 0;
+	color: #000122;
+	background-color: #fff;
+}
+.table {
+	display: flex;
+	border-collapse: collapse;
+}
+.table tr {
+	border: 1px solid #000122;
+}
+.table tr:first-child {
+	background-color: #004ddd;
+	text-align: center;
+	font-weight: 600;
+}
+.table td {
+	background-color: #004dddad;
+	padding: 6px;
+	border: 1px solid #000122;
+}
 
 
 
@@ -387,11 +417,29 @@ h1 {
 		display: none;
 		visibility: visible;
 	}
+	
+	.task__name {
+		font-size: 15px;
+	}
+	.question {
+		padding: 50px 0 30px 0;
+	}
+}
+@media (max-width: 320px) {
 	.about__title p {
 		/* font-size: 34px; */
-		font-size: calc(34px + (16 * 16 * 0.7) * ((100vw - 320px) / 990));
+		font-size: calc(26px + (16 * 16 * 0.4) * ((100vw - 320px) / 1440));
 	}
 	h1 {
-		font-size: calc(12px + (16 * 16 * 0.7) * ((100vw - 320px) / 1440));
+		font-size: calc(17px + (16 * 16 * 0.5) * ((100vw - 320px) / 1440));
+	}
+	.answer__text {
+		font-size: calc(14px + (16 * 16 * 0.7) * ((100vw - 320px) / 1440));
+	}
+	.question__text {
+		font-size: calc(11px + (16 * 16 * 0.7) * ((100vw - 320px) / 1440));
+	}
+	.question__title {
+		font-size: calc(11px + (16 * 16 * 0.7) * ((100vw - 320px) / 1440));
 	}
 }
