@@ -456,7 +456,7 @@ h1 {
 	}
 }
 @media (max-width: 768px) {
-	.table__2 {
+	.table-2 {
 	min-width: 990px;
 	overflow-x: auto;
 }
