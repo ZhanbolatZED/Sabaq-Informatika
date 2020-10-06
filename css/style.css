@@ -3,6 +3,7 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
 html, body {
 	font-family: Arial, Roboto, sans-serif;
 	scroll-behavior: smooth;
@@ -294,7 +295,7 @@ input[type="checkbox"]:checked ~ .header__list {
 }
 .content__title {
 	position: relative;
-	padding: 30px 20px;
+	padding: 100px 20px;
 	overflow: hidden;
 }
 h1 {
