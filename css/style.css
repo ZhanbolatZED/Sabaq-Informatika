@@ -102,7 +102,8 @@ input[type="checkbox"]
 {
 	position: absolute;
 	right: 20px;
-	top: 20px;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 30px;
 	height: 30px;
 	z-index: 101;
@@ -113,7 +114,8 @@ input[type="checkbox"]
 	display: block;
 	position: absolute;
 	right: 20px;
-	top: 20px;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 30px;
 	height: 20px;
 	z-index: 1002;
@@ -288,21 +290,20 @@ input[type="checkbox"]:checked ~ .header__list {
 	width: 100%;
 	height: 100%;
 	color: #0ef0f0;
-	background-color: #000122;
+	background-color: #00011d;
 }
 .homework__body {
 	display: block;
 }
 .content__title {
 	position: relative;
-	padding: 100px 20px;
+	padding: 150px 0px 0px 0px;
 	overflow: hidden;
 }
 h1 {
 	font-size: calc(17px + 16 * (100vw / 1440));
 	font-weight: 600;
 	letter-spacing: 2px;
-	/* text-indent: 60px; */
 	text-align: center;
 }
 .content__task {
@@ -361,7 +362,7 @@ h1 {
 	opacity: 1;
 }
 .answer__question {
-	padding: 0px 0 100px 0;
+	padding: 0px 0 1px 0;
 	display: block;
 }
 .answer {
@@ -431,6 +432,31 @@ h1 {
 }
 .table td ul {
 	padding: 5px 0 0 15px;
+}
+.table__text {
+	display: flex;
+	justify-content: center;
+	border-collapse: collapse;
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.9s ease 0s;
+}
+.question__table._active .table__text {
+	opacity: 1;
+	transform: scale(1);
+}
+.table__text td {
+	color: #0ef0f0;
+	padding: 5px 0;
+}
+.table__text-onderline {
+	position: absolute;
+	font-size: 10px;
+	margin: 7px 0px 0 1px;
+}
+.equals {
+	position: relative;
+    padding: 0 0 0 13px;
 }
 .__anime-show {
 	transform: translate(0, 120%);
